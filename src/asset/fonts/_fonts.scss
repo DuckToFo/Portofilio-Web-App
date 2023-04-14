@@ -1,0 +1,7 @@
+// Universal fonts importing partial file
+// for Google Fonts
+// using @import url(<fonts url>) and Sass Variables Syntaxes
+// importing in other CSS Stylesheets with @use and below variables
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+$nunito: Nunito, sans-serif;
