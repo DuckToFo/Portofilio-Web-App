@@ -1,41 +1,52 @@
 import './App.scss';
-import { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Count from './pages/Count';
 import List from './pages/List';
 import Dices from './pages/Dices';
-
-const Header = () => {
+import { AiFillHome, AiFillClockCircle, AiOutlineClose } from 'react-icons/ai';
+const Sidebar = () => {
     return (
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/count">Counter</Link>
-            </li>
-            <li>
-                <Link to="/list">List</Link>
-            </li>
-            <li>
-                <Link to="/dices">Sicbo</Link>
-            </li>
-        </ul>
+        <div className="sidebar">
+            <div>
+                <Link className="redirect" to="/">
+                    <AiFillHome />
+                </Link>
+            </div>
+            <div>
+                <Link className="redirect" to="/count">
+                    <AiFillClockCircle />
+                </Link>
+            </div>
+            <div>
+                <Link className="redirect" to="/list">
+                    <AiOutlineClose />
+                </Link>
+            </div>
+            <div>
+                <Link className="redirect" to="/dices">
+                    <AiOutlineClose />
+                </Link>
+            </div>
+        </div>
     );
 };
 
 function App() {
     return (
         <div className="App">
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/count" element={<Count />} />
-                <Route path="/list" element={<List />} />
-                <Route path="/dices" element={<Dices />} />
-            </Routes>
-            <footer>Made by Ducky.</footer>
+            <div className="content">
+                <Sidebar />
+                <div className="content-panel">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/count" element={<Count />} />
+                        <Route path="/list" element={<List />} />
+                        <Route path="/dices" element={<Dices />} />
+                    </Routes>
+                </div>
+            </div>
+            <footer>Made with ReactJS and Sass.</footer>
         </div>
     );
 }
