@@ -22,17 +22,18 @@ body {
 }
 .sidebar {
     background-color: black;
-    margin: 30px 30px;
+    margin: 30px 0px 30px 30px;
     margin-left: 10%;
-    width: 100px;
+    width: 80px;
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    border-radius: 15px;
     .redirect {
         text-decoration: none;
-        font-size: 50px;
+        font-size: 40px;
         color: white;
     }
     .redirect:visited {
@@ -49,13 +50,14 @@ body {
 }
 .content {
     .content-panel {
-        @include debugSetting;
         background-color: white;
         padding: 20px 50px;
-        margin: 50px 0px;
+        margin: 50px 10% 50px 0px;
         height: auto;
-        width: 65%;
+        width: 37%;
         overflow-x: hidden;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 }
 .App {
@@ -65,7 +67,7 @@ body {
 }
 
 Footer {
-    background-color: white;
+    background: none;
     position: fixed;
     box-sizing: border-box;
     height: auto;

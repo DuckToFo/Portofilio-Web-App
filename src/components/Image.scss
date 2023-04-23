@@ -1,0 +1,31 @@
+// border: 2px solid red;
+
+@use '../asset/fonts/fonts';
+.info-container {
+    border-radius: 15px;
+    width: 28%;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: url('../asset/profile.jpg');
+    background-size: cover;
+    .redirect-container {
+        margin-bottom: 30%;
+        .name {
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            font-family: fonts.$nunito;
+        }
+        .link-container {
+            margin: 0px 20px;
+            text-align: center;
+            .redirect {
+                margin: 0px 20px;
+                font-size: large;
+                font-family: fonts.$nunito;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Count from './pages/Count';
 import List from './pages/List';
 import Dices from './pages/Dices';
+import Image from './components/Image';
 import { AiFillHome, AiFillClockCircle, AiOutlineClose } from 'react-icons/ai';
 const Sidebar = () => {
     return (
@@ -37,6 +38,7 @@ function App() {
         <div className="App">
             <div className="content">
                 <Sidebar />
+                <Image name="Trần Trung Đức" />
                 <div className="content-panel">
                     <Routes>
                         <Route path="/" element={<Home />} />
